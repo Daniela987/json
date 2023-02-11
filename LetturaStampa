@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 style="color:#660033"> CURRICULUM VITAE </h1>
+
+<p> <h2 style="color:#006699"> DATI PERSONALI <h2>
+<h3 id="nome"> Nome: </h3>
+<h3 id="cognome"> Cognome: </h3>
+<h3 id="data_di_nascita"> Data di nascita: </h3>
+<h3 id="nazionalita"> Nazionalità: </h3>
+</p>
+
+<p> <h2 style="color:#006699"> CONTATTI <h2>
+<h3 id="telefono"> Telefono: </h3>
+<h3 id="mail"> Mail: </h3>
+</p>
+
+<p> <h2 style="color:#006699"> ISTRUZIONE E FORMAZIONE <h2>
+<h3 id="istruzione"> Istruzione: </h3>
+<h3 id="esperienza_lavorativa"> Esperienza lavorativa: </h3>
+</p>
+
+<p> <h2 style="color:#006699"> COMPETENZE <h2>
+<h3 > Competenze linguistiche:
+<ul>
+  <li id="competenze_linguistiche1"> Lingua madre: </li>
+  <li id="competenze_linguistiche2"> Altre lingue: </li>
+</ul>
+</h3>
+<h3 > Competenze digitali:
+<ul>
+  <li id="competenze_digitali1"> </li>
+  <li id="competenze_digitali2"> </li>
+  <li id="competenze_digitali3"> </li>
+</ul>
+</h3>
+</p>
+
+<p> <h2 style="color:#006699"> ALTRE INFORMAZIONI <h2>
+<h3 id="patente_di_guida"> Patente: </h3>
+</p>
+
+<script>
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    var myObj = JSON.parse(this.responseText);
+    
+    document.getElementById("nome").innerHTML = myObj.nome;
+    document.getElementById("cognome").innerHTML = myObj.cognome;
+    document.getElementById("data_di_nascita").innerHTML = myObj.data_di_nascita;
+    document.getElementById("nazionalita").innerHTML = myObj.nazionalita;
+
+    document.getElementById("telefono").innerHTML = myObj.telefono;
+    document.getElementById("mail").innerHTML = myObj.mail;
+
+    document.getElementById("istruzione").innerHTML = myObj.istruzione;
+    document.getElementById("esperienza_lavorativa").innerHTML = myObj.esperienza_lavorativa;
+
+    document.getElementById("competenze_linguistiche1").innerHTML = myObj.competenze_linguistiche[0].lingua_madre;
+    document.getElementById("competenze_linguistiche2").innerHTML = myObj.competenze_linguistiche[1].altre_lingue;
+    document.getElementById("competenze_linguistiche1").innerHTML = myObj.competenze_linguistiche[0].lingua_madre;
+    document.getElementById("competenze_digitali1").innerHTML = myObj.competenze_digitali[0];
+    document.getElementById("competenze_digitali2").innerHTML = myObj.competenze_digitali[1];
+    document.getElementById("competenze_digitali3").innerHTML = myObj.competenze_digitali[2];
+
+    document.getElementById("patente_di_guida").innerHTML = myObj.patente_di_guida;
+  }
+};
+xmlhttp.open("GET", "Cv.json", true);
+xmlhttp.send();
+</script>
+
+
+</body>
+</html>
