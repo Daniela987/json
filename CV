@@ -1,0 +1,24 @@
+{
+	"nome": "Daniela",
+	"cognome": "Antonacci",
+	"data di nascita": "28/07/2004",
+	"nazionalita": "italiana",
+	"telefono": "+39 333 333 3333",
+	"mail": "e.mail@gmail.com",
+	"istruzione": "diploma ITIS informatico - ITIS Cannizzaro | 2023, Rho, Italia",
+  "esperienza lavorativa": "Stage in azienda informatica - OperaLogica | 30/06/2022 - 15/07/2022, Garbagnate, Italia ",
+  "competenze linguistiche": 
+  [
+    {
+      "lingua madre": "italiano",
+      "altre lingue": 
+        "inglese - livello B2 certificato FIRST"
+    }
+  ],
+  "competenze digitali": [
+    "utilizzo dei programmi di base - pacchetto Office e strumenti del computer",
+    "linguaggi di programmazione - Java, JavaScript, HTML, CSS, JSON, PHP",
+    "altri strumenti - Packet Tracer, XAMPP"
+  ],
+  "patente di guida": "patente di guida B attualmente in svolgimento - automunita"
+}
